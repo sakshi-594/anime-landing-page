@@ -1,0 +1,491 @@
+/* 🌑 GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* 🩸 NAVBAR */
+nav {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  backdrop-filter: blur(10px);
+}
+
+nav h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #e50914;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e50914;
+}
+
+/* 🩶 HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('tanjiro1234.jpg') center center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  color: #e50914;
+  text-shadow: 0 0 25px rgba(229, 9, 20, 0.8);
+  letter-spacing: 3px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin-top: 15px;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #e50914, #ff4a4a);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.7);
+}
+
+/* ✨ STORY SECTION */
+.story {
+  background: url('storyy.jpg') center/cover no-repeat fixed;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.story::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.story h2, .story p {
+  position: relative;
+  z-index: 2;
+}
+
+.story h2 {
+  color: #e50914;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.story p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* ⚔ CHARACTERS SECTION */
+.characters {
+  padding: 120px 40px;
+  background-color: #0b0b0b;
+  text-align: center;
+}
+
+.characters h2 {
+  font-size: 2.6rem;
+  color: #e50914;
+}
+
+.characters h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 40px;
+}
+
+.char-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.char-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.1);
+}
+
+.char-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+}
+
+.char-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.char-card h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* 🌬 BREATHING STYLES */
+.breathing {
+  background: url('zenitsuuuu.jpg') center/cover no-repeat fixed;
+  padding: 120px 40px;
+  position: relative;
+  text-align: center;
+}
+
+.breathing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.breathing h2, .breathing .list-item {
+  position: relative;
+  z-index: 2;
+}
+
+.list-item {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 18px auto;
+  padding: 15px 20px;
+  max-width: 700px;
+  border-radius: 10px;
+  color: #fff;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+}
+
+.list-item span {
+  color: #ff4a4a;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* 🌸 ARCS SECTION */
+.arcs {
+  background: url('skyy.jpg') center/cover no-repeat fixed;
+  padding: 120px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.arcs::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.arcs h2, .arcs .list-item {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎬 MOVIES SECTION (STATIC BACKGROUND) */
+.movies {
+  background: url('corps.jpg') center center/cover no-repeat fixed;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.movies::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.movies .content {
+  position: relative;
+  z-index: 2;
+}
+
+.movies h2 {
+  color: #e50914;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+}
+
+.movies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.movies li {
+  margin: 18px 0;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 20px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.movies li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+}
+
+.movies li span {
+  color: #ff4a4a;
+  font-weight: 700;
+}
+
+/* 📺 STREAMING PLATFORMS */
+.streaming {
+  padding: 120px 40px;
+  text-align: center;
+  background: #111;
+}
+
+.streaming h2 {
+  color: #e50914;
+  font-size: 2.4rem;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.platform-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+.platform-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.6);
+}
+
+/* 🎥 TRAILER SECTION */
+.trailer {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px;
+  background: #000;
+  overflow: hidden;
+}
+
+.trailer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.trailer h2 {
+  position: relative;
+  z-index: 2;
+  color: #e50914;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+/* ✅ UPDATED RESPONSIVE TRAILER VIDEO */
+.trailer iframe {
+  width: 80%;
+  max-width: 1000px;
+  height: 550px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .trailer iframe {
+    width: 90%;
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trailer iframe {
+    width: 95%;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trailer iframe {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #e50914;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  padding: 20px 25px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.8);
+}
+
+/* ⚫ FOOTER */
+footer {
+  background: #0a0a0a;
+  text-align: center;
+  padding: 25px;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .platforms {
+    flex-direction: column;
+    align-items: center;
+  }
+}
